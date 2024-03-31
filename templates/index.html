@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    height: {
+                        '80vh': '80vh',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="h-24 w-full flex justify-center items-center bg-gray-100">
+        <div class="h-16 w-11/12 flex justify-center items-center">
+            <div class="w-11/12 h-full flex justify-center items-center">
+                <h1
+                    class="text-purple-500 text-lg sm:text-xl md:text-2xl font-black text-nowrap hover:text-emerald-500">
+                    Download your favourite video from youtube</h1>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-80vh md:h-screen flex justify-center items-center">
+        <form action="/download" method="post" class="w-1/2 h-1/2 flex items-center justify-around flex-col">
+            <input type="text" id="link"
+                class="block border-2 border-black rounded-lg w-96 h-12 hover:height-16 hover:border-4 hover:border-sky-500 text-center"
+                name="link" placeholder="Enter Youtube Vedio link Here">
+            <p></p>
+            <select
+                class="border-2 border-black rounded-lg w-96 h-12 hover:height-16 hover:border-4 hover:border-sky-500 text-center"
+                name="value">
+                <option value="0">Highest Quality</option>
+                <option value="1">Lowest Quality</option>
+                <option value="2">Audio Only</option>
+            </select>
+            <input type="submit" value="Download"
+                class=" border-2 border-black rounded-lg w-48 h-14 hover:height-16 hover:border-4 hover:border-red-500 text-center">
+        </form>
+    </div>
+    <div class="text-center">@2024 Rahul002</div>
+</body>
+
+</html>
